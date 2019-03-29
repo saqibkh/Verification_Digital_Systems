@@ -1,0 +1,114 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+                0x0080e400                . = 0x80e400
+
+._start         0x0080e400       0x28
+ start*(.text)
+ .text          0x0080e400       0x28 start.o
+
+.text           0x0080e428      0xb60
+ *(.text)
+ .text          0x0080e428       0x24 hello-world.o
+                0x0080e428                main
+ .text          0x0080e44c      0x394 ../mini-libc/printf.o
+                0x0080e44c                outbyte
+                0x0080e468                prints
+                0x0080e524                printi
+                0x0080e5e0                print
+                0x0080e788                printf
+                0x0080e7b4                sprintf
+ .text          0x0080e7e0      0x150 ../mini-libc/libc_asm.o
+                0x0080e7e0                _testfail
+                0x0080e7ec                _testpass
+                0x0080e7fc                _outbyte
+                0x0080e81c                _inbyte
+                0x0080e84c                _div
+                0x0080e8a0                strcpy
+                0x0080e8b8                strncpy
+                0x0080e8e4                strncmp
+ .text          0x0080e930      0x658 ../mini-libc/memcpy.o
+                0x0080e930                memcpy
+                0x0080ef84                raise
+
+.glue_7         0x0080ef88        0x0
+ .glue_7        0x00000000        0x0 linker stubs
+
+.glue_7t        0x0080ef88        0x0
+ .glue_7t       0x00000000        0x0 linker stubs
+
+.vfp11_veneer   0x0080ef88        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0x0080ef88        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.rodata
+ *(.rodata)
+
+.rodata.str1.4  0x0080ef88       0x24
+ .rodata.str1.4
+                0x0080ef88       0x24 hello-world.o
+
+.rodata.str1.1  0x0080efac        0x7
+ .rodata.str1.1
+                0x0080efac        0x7 ../mini-libc/printf.o
+
+.data           0x0080efb3        0x0
+ *(.data)
+ .data          0x0080efb3        0x0 hello-world.o
+ .data          0x0080efb3        0x0 start.o
+ .data          0x0080efb3        0x0 ../mini-libc/printf.o
+ .data          0x0080efb3        0x0 ../mini-libc/libc_asm.o
+ .data          0x0080efb3        0x0 ../mini-libc/memcpy.o
+
+.bss            0x0080efb3        0x0
+ *(.bss)
+ .bss           0x0080efb3        0x0 hello-world.o
+ .bss           0x0080efb3        0x0 start.o
+ .bss           0x0080efb3        0x0 ../mini-libc/printf.o
+ .bss           0x0080efb3        0x0 ../mini-libc/libc_asm.o
+ .bss           0x0080efb3        0x0 ../mini-libc/memcpy.o
+
+.stack          0x0080efb3        0x0
+                0x0080efb3                __stack = .
+LOAD hello-world.o
+LOAD start.o
+LOAD ../mini-libc/printf.o
+LOAD ../mini-libc/libc_asm.o
+LOAD ../mini-libc/memcpy.o
+LOAD /usr/local/packages/CodeSourcery/arm-2010.09/lib/gcc/arm-none-eabi/4.5.1/libgcc.a
+OUTPUT(hello-world.elf elf32-littlearm)
+
+.comment        0x00000000       0x2a
+ .comment       0x00000000       0x2a hello-world.o
+                                 0x2b (size before relaxing)
+ .comment       0x00000000       0x2b ../mini-libc/printf.o
+ .comment       0x00000000       0x2b ../mini-libc/memcpy.o
+
+.note.GNU-stack
+                0x00000000        0x0
+ .note.GNU-stack
+                0x00000000        0x0 hello-world.o
+ .note.GNU-stack
+                0x00000000        0x0 ../mini-libc/printf.o
+ .note.GNU-stack
+                0x00000000        0x0 ../mini-libc/memcpy.o
+
+.ARM.attributes
+                0x00000000       0x2b
+ .ARM.attributes
+                0x00000000       0x2a hello-world.o
+ .ARM.attributes
+                0x0000002a       0x1d start.o
+ .ARM.attributes
+                0x00000047       0x2a ../mini-libc/printf.o
+ .ARM.attributes
+                0x00000071       0x1d ../mini-libc/libc_asm.o
+ .ARM.attributes
+                0x0000008e       0x2a ../mini-libc/memcpy.o

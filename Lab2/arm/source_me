@@ -1,0 +1,15 @@
+echo "Setting Environment Variables for EE382M Lab 2"
+
+####################################################
+#################### AMBER #########################
+####################################################
+export COMP_VERSION=3.3.2
+COMP_PATH=/usr/local/packages/arm/$COMP_VERSION
+export PATH=$PATH:$COMP_PATH/bin
+export AMBER_CROSSTOOL=arm-linux
+module load mentor/modelsim/2016
+module load xilinx/2014.2
+export XILINX=/usr/local/packages/Xilinx_32/14.4/ISE_DS/ISE
+####################################################
+
+echo "Done Setting Environment Variables"

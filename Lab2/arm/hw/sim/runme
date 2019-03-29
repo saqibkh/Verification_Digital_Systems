@@ -1,0 +1,3 @@
+cd ../tests
+arm-linux-ld -Bstatic -Map ethmac_tx.map  -fix-v4bx -o ethmac_tx.elf -T sections.lds ethmac_tx.o -shared
+cd ../sim

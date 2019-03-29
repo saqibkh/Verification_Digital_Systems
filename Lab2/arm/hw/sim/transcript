@@ -1,0 +1,677 @@
+# //  ModelSim SE-64 10.6 Dec 13 2016Linux 2.6.32-754.3.5.el6.x86_64
+# //
+# //  Copyright 1991-2016 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# vsim -voptargs="+acc" tb -assertdebug -do "run.do" 
+# Start time: 00:21:26 on Mar 05,2019
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 2 FSMs in module "tb_uart(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "a25_decode(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "a25_dcache(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "a25_icache(fast)".
+# ** Note: (vopt-143) Recognized 2 FSMs in module "uart(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "a25_wishbone(fast)".
+# Loading work.tb(fast)
+# Loading work.system(fast)
+# Loading work.clocks_resets(fast)
+# Loading work.a25_core(fast)
+# Loading work.a25_fetch(fast)
+# Loading work.a25_icache(fast)
+# Loading work.generic_sram_line_en(fast)
+# Loading work.generic_sram_byte_en(fast)
+# Loading work.a25_decode(fast)
+# Loading work.a25_decompile(fast)
+# Loading work.a25_execute(fast)
+# Loading work.a25_barrel_shift(fast)
+# Loading work.a25_alu(fast)
+# Loading work.a25_multiply(fast)
+# Loading work.a25_register_bank(fast)
+# Loading work.a25_mem(fast)
+# Loading work.a25_dcache(fast)
+# Loading work.a25_write_back(fast)
+# Loading work.a25_wishbone(fast)
+# Loading sv_std.std
+# Loading work.FSMProperties(fast)
+# Loading work.module4SVA(fast)
+# Loading work.test(fast)
+# Loading work.a25_coprocessor(fast)
+# Loading work.eth_top(fast)
+# Loading work.eth_miim(fast)
+# Loading work.eth_clockgen(fast)
+# Loading work.eth_shiftreg(fast)
+# Loading work.eth_outputcontrol(fast)
+# Loading work.eth_registers(fast)
+# Loading work.eth_register(fast)
+# Loading work.eth_register(fast__1)
+# Loading work.eth_register(fast__2)
+# Loading work.eth_register(fast__3)
+# Loading work.eth_register(fast__4)
+# Loading work.eth_register(fast__5)
+# Loading work.eth_register(fast__6)
+# Loading work.eth_register(fast__7)
+# Loading work.eth_register(fast__8)
+# Loading work.eth_register(fast__9)
+# Loading work.eth_register(fast__10)
+# Loading work.eth_register(fast__11)
+# Loading work.eth_register(fast__12)
+# Loading work.eth_register(fast__13)
+# Loading work.eth_register(fast__14)
+# Loading work.eth_maccontrol(fast)
+# Loading work.eth_receivecontrol(fast)
+# Loading work.eth_transmitcontrol(fast)
+# Loading work.eth_txethmac(fast)
+# Loading work.eth_txcounters(fast)
+# Loading work.eth_txstatem(fast)
+# Loading work.eth_crc(fast)
+# Loading work.eth_random(fast)
+# Loading work.eth_rxethmac(fast)
+# Loading work.eth_rxstatem(fast)
+# Loading work.eth_rxcounters(fast)
+# Loading work.eth_rxaddrcheck(fast)
+# Loading work.eth_wishbone(fast)
+# Loading work.eth_spram_256x32(fast)
+# Loading work.generic_sram_byte_en(fast__1)
+# Loading work.eth_fifo(fast)
+# Loading work.eth_macstatus(fast)
+# Loading work.generic_iobuf(fast)
+# Loading work.boot_mem(fast)
+# Loading work.generic_sram_byte_en(fast__2)
+# Loading work.uart(fast)
+# Loading work.test_module(fast)
+# Loading work.timer_module(fast)
+# Loading work.interrupt_controller(fast)
+# Loading work.main_mem(fast)
+# Loading work.wishbone_arbiter(fast)
+# Loading work.tb_uart(fast)
+# Loading work.dumpvcd(fast)
+# Loading work.test_Wrapper(fast)
+# Loading work.Wrapper(fast)
+# do run.do
+# Test ethmac_tx, log file tests.log
+# Load boot memory from ../tests/ethmac_tx.mem
+# Read in 161 lines
+# ** Error: Assertion error.
+#    Time: 152500 ps Started: 127500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 227500 ps Started: 202500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 302500 ps Started: 277500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 377500 ps Started: 352500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 452500 ps Started: 427500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 527500 ps Started: 502500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 602500 ps Started: 577500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 677500 ps Started: 652500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 927500 ps Started: 902500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 1002500 ps Started: 977500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 1077500 ps Started: 1052500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 1152500 ps Started: 1127500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 1227500 ps Started: 1202500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 1427500 ps Started: 1402500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 1502500 ps Started: 1477500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 1577500 ps Started: 1552500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 1652500 ps Started: 1627500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 1927500 ps Started: 1902500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 2002500 ps Started: 1977500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 2077500 ps Started: 2052500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 2152500 ps Started: 2127500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 2427500 ps Started: 2402500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 2502500 ps Started: 2477500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 2577500 ps Started: 2552500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 2652500 ps Started: 2627500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 2727500 ps Started: 2702500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 2802500 ps Started: 2777500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 2877500 ps Started: 2852500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 2952500 ps Started: 2927500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 3027500 ps Started: 3002500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 3102500 ps Started: 3077500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 3177500 ps Started: 3152500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 3252500 ps Started: 3227500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 3327500 ps Started: 3302500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 3402500 ps Started: 3377500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 3477500 ps Started: 3452500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 3552500 ps Started: 3527500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 3627500 ps Started: 3602500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 3702500 ps Started: 3677500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 3802500 ps Started: 3777500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 4027500 ps Started: 4002500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 4127500 ps Started: 4102500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 4202500 ps Started: 4177500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 4277500 ps Started: 4252500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 4352500 ps Started: 4327500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 4427500 ps Started: 4402500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 4502500 ps Started: 4477500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 4577500 ps Started: 4552500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 4652500 ps Started: 4627500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 4727500 ps Started: 4702500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 4802500 ps Started: 4777500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 4877500 ps Started: 4852500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 4952500 ps Started: 4927500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 5027500 ps Started: 5002500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 5102500 ps Started: 5077500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 5177500 ps Started: 5152500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 5252500 ps Started: 5227500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 5352500 ps Started: 5327500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 5577500 ps Started: 5552500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 5677500 ps Started: 5652500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 5752500 ps Started: 5727500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 5827500 ps Started: 5802500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 5902500 ps Started: 5877500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 5977500 ps Started: 5952500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 6052500 ps Started: 6027500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 6127500 ps Started: 6102500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 6202500 ps Started: 6177500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 6277500 ps Started: 6252500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 6352500 ps Started: 6327500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 6427500 ps Started: 6402500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 6502500 ps Started: 6477500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 6577500 ps Started: 6552500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 6652500 ps Started: 6627500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 6727500 ps Started: 6702500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 6802500 ps Started: 6777500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 6902500 ps Started: 6877500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 7127500 ps Started: 7102500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 7227500 ps Started: 7202500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 7302500 ps Started: 7277500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 7377500 ps Started: 7352500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 7452500 ps Started: 7427500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 7527500 ps Started: 7502500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 7602500 ps Started: 7577500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 7677500 ps Started: 7652500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 7752500 ps Started: 7727500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 7827500 ps Started: 7802500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 7902500 ps Started: 7877500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 7977500 ps Started: 7952500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 8052500 ps Started: 8027500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 8127500 ps Started: 8102500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 8202500 ps Started: 8177500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 8277500 ps Started: 8252500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 8352500 ps Started: 8327500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 8452500 ps Started: 8427500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 8677500 ps Started: 8652500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 8777500 ps Started: 8752500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 8852500 ps Started: 8827500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 8927500 ps Started: 8902500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 9002500 ps Started: 8977500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 9077500 ps Started: 9052500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 9152500 ps Started: 9127500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 9227500 ps Started: 9202500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 9302500 ps Started: 9277500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 9377500 ps Started: 9352500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 9452500 ps Started: 9427500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 9527500 ps Started: 9502500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 9602500 ps Started: 9577500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 9677500 ps Started: 9652500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 9752500 ps Started: 9727500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 9827500 ps Started: 9802500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 9902500 ps Started: 9877500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 10002500 ps Started: 9977500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 10227500 ps Started: 10202500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 10327500 ps Started: 10302500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 10402500 ps Started: 10377500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 10477500 ps Started: 10452500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 10552500 ps Started: 10527500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 10627500 ps Started: 10602500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 10702500 ps Started: 10677500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 10777500 ps Started: 10752500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 10852500 ps Started: 10827500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 10927500 ps Started: 10902500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 11002500 ps Started: 10977500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 11077500 ps Started: 11052500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 11152500 ps Started: 11127500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 11227500 ps Started: 11202500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 11302500 ps Started: 11277500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 11377500 ps Started: 11352500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 11452500 ps Started: 11427500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 11552500 ps Started: 11527500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 11777500 ps Started: 11752500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 11877500 ps Started: 11852500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 11952500 ps Started: 11927500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 12027500 ps Started: 12002500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 12102500 ps Started: 12077500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 12177500 ps Started: 12152500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 12252500 ps Started: 12227500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 12327500 ps Started: 12302500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 12402500 ps Started: 12377500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 12552500 ps Started: 12527500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 12627500 ps Started: 12602500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 12702500 ps Started: 12677500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 12777500 ps Started: 12752500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 12852500 ps Started: 12827500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 12927500 ps Started: 12902500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 13002500 ps Started: 12977500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 13227500 ps Started: 13202500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 13427500 ps Started: 13427500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 72 Expr: not(t_i_wb_ack)
+# ** Error: Assertion error.
+#    Time: 13427500 ps Started: 13402500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~$isunknown(t_i_wb_dat)
+# ** Error: Assertion error.
+#    Time: 13477500 ps Started: 13477500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 72 Expr: not(t_i_wb_ack)
+# ** Error: Assertion error.
+#    Time: 13477500 ps Started: 13452500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# Coregop not implemented in decompiler yet
+# ** Error: Assertion error.
+#    Time: 13527500 ps Started: 13527500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 72 Expr: not(t_i_wb_ack)
+# ** Error: Assertion error.
+#    Time: 13527500 ps Started: 13502500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 13577500 ps Started: 13577500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 72 Expr: not(t_i_wb_ack)
+# ** Error: Assertion error.
+#    Time: 13577500 ps Started: 13552500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+# ** Error: Assertion error.
+#    Time: 13602500 ps Started: 13602500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 60 Expr: t_o_wb_cyc&t_o_wb_stb
+# ** Error: Assertion error.
+#    Time: 13627500 ps Started: 13602500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~$isunknown(t_i_wb_dat)
+# ** Error: Assertion error.
+#    Time: 13652500 ps Started: 13652500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 60 Expr: t_o_wb_cyc&t_o_wb_stb
+# 
+# FATAL ERROR in tb.u_system.u_amber.u_decode @ tick      547
+# Instruction with x's =xxxxxxxx
+# 
+# ----------------------------------------------------------------------------
+# Amber Core
+#          User         FIRQ         IRQ        > SVC
+# r0       0x20000400
+# r1       0x0000X000
+# r2       0x000001c8
+# r3       0x00000000
+# r4       0x00000000
+# r5       0x00000000
+# r6       0x00000000
+# r7       0x00000000
+# r8       0x00000000   0xdeadbeef 
+# r9       0x00000000   0xdeadbeef 
+# r10      0x00000000   0xdeadbeef 
+# r11      0xdeadbeef   0xdeadbeef 
+# r12      0xdeadbeef   0xdeadbeef 
+# r13      0xdeadbeef   0xdeadbeef   0xdeadbeef   0xdeadbeef
+# r14 (lr) 0xdeadbeef   0xdeadbeef   0xdeadbeef   0xxXXXXXXf
+# r15 (pc) 0x0XxxxxxX
+# 
+# Status Bits: N=0, Z=x, C=1, V=0, IRQ Mask 1, FIRQ Mask 1, Mode =     Supervisor
+# ----------------------------------------------------------------------------
+# 
+# ++++++++++++++++++++
+# Failed ethmac_tx
+# ++++++++++++++++++++
+# ** Note: $finish    : ../vlog/tb/tb.v(505)
+#    Time: 13677500 ps  Iteration: 4  Instance: /tb
+# 1
+# Break in Module tb at ../vlog/tb/tb.v line 505
+atv log -asserts -enable /tb/u_system/u_amber/u_wishbone/wrp/assert__Validate_Next_Clock_Cycle
+# Thread view logging enabled for assert__Validate_Next_Clock_Cycle
+add wave /tb/u_system/u_amber/u_wishbone/wrp/assert__Validate_Next_Clock_Cycle
+run
+# 
+# ----------------------------------------------------------------------------
+# Amber Core
+#          User         FIRQ         IRQ        > SVC
+# r0       0x20000400
+# r1       0x0000X000
+# r2       0x000001c8
+# r3       0x00000000
+# r4       0x00000000
+# r5       0x00000000
+# r6       0x00000000
+# r7       0x00000000
+# r8       0x00000000   0xdeadbeef 
+# r9       0x00000000   0xdeadbeef 
+# r10      0x00000000   0xdeadbeef 
+# r11      0xdeadbeef   0xdeadbeef 
+# r12      0xdeadbeef   0xdeadbeef 
+# r13      0xdeadbeef   0xdeadbeef   0xdeadbeef   0xdeadbeef
+# r14 (lr) 0xdeadbeef   0xdeadbeef   0xdeadbeef   0xxXXXXXXf
+# r15 (pc) 0x0XxxxxxX
+# 
+# Status Bits: N=0, Z=x, C=1, V=0, IRQ Mask 1, FIRQ Mask 1, Mode =     Supervisor
+# ----------------------------------------------------------------------------
+# 
+# ++++++++++++++++++++
+# Failed ethmac_tx
+# ++++++++++++++++++++
+# ** Note: $finish    : ../vlog/tb/tb.v(505)
+#    Time: 13677500 ps  Iteration: 5  Instance: /tb
+# 1
+# Break in Module tb at ../vlog/tb/tb.v line 505
+run
+# ** Error: Assertion error.
+#    Time: 13677500 ps Started: 13677500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 72 Expr: not(t_i_wb_ack)
+# ** Error: Assertion error.
+#    Time: 13677500 ps Started: 13652500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run -all
+# 
+# FATAL ERROR in tb.u_system.u_amber.u_decode @ tick      548
+# Instruction with x's =xxxxxxxx
+# 
+# ----------------------------------------------------------------------------
+# Amber Core
+#          User         FIRQ         IRQ        > SVC
+# r0       0x20000400
+# r1       0x0000X000
+# r2       0x000001c8
+# r3       0x00000000
+# r4       0x00000000
+# r5       0x00000000
+# r6       0x00000000
+# r7       0x00000000
+# r8       0x00000000   0xdeadbeef 
+# r9       0x00000000   0xdeadbeef 
+# r10      0x00000000   0xdeadbeef 
+# r11      0xdeadbeef   0xdeadbeef 
+# r12      0xdeadbeef   0xdeadbeef 
+# r13      0xdeadbeef   0xdeadbeef   0xdeadbeef   0xdeadbeef
+# r14 (lr) 0xdeadbeef   0xdeadbeef   0xdeadbeef   0xxXXXXXXf
+# r15 (pc) 0x0XxxxxxX
+# 
+# Status Bits: N=0, Z=x, C=1, V=0, IRQ Mask 1, FIRQ Mask 1, Mode =     Supervisor
+# ----------------------------------------------------------------------------
+# 
+# ++++++++++++++++++++
+# Failed ethmac_tx
+# ++++++++++++++++++++
+# ** Note: $finish    : ../vlog/tb/tb.v(505)
+#    Time: 13702500 ps  Iteration: 4  Instance: /tb
+# 1
+# Break in Module tb at ../vlog/tb/tb.v line 505
+run
+# ** Error: Assertion error.
+#    Time: 13702500 ps Started: 13702500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 60 Expr: t_o_wb_cyc&t_o_wb_stb
+add atv /tb/u_system/u_amber/u_wishbone/wrp/assert__Validate_Next_Clock_Cycle 13702500 ps
+run
+run -all
+# 
+# ----------------------------------------------------------------------------
+# Amber Core
+#          User         FIRQ         IRQ        > SVC
+# r0       0x20000400
+# r1       0x0000X000
+# r2       0x000001c8
+# r3       0x00000000
+# r4       0x00000000
+# r5       0x00000000
+# r6       0x00000000
+# r7       0x00000000
+# r8       0x00000000   0xdeadbeef 
+# r9       0x00000000   0xdeadbeef 
+# r10      0x00000000   0xdeadbeef 
+# r11      0xdeadbeef   0xdeadbeef 
+# r12      0xdeadbeef   0xdeadbeef 
+# r13      0xdeadbeef   0xdeadbeef   0xdeadbeef   0xdeadbeef
+# r14 (lr) 0xdeadbeef   0xdeadbeef   0xdeadbeef   0xxXXXXXXf
+# r15 (pc) 0x0XxxxxxX
+# 
+# Status Bits: N=0, Z=x, C=1, V=0, IRQ Mask 1, FIRQ Mask 1, Mode =     Supervisor
+# ----------------------------------------------------------------------------
+# 
+# ++++++++++++++++++++
+# Failed ethmac_tx
+# ++++++++++++++++++++
+# ** Note: $finish    : ../vlog/tb/tb.v(505)
+#    Time: 13727500 ps  Iteration: 4  Instance: /tb
+# 1
+# Break in Module tb at ../vlog/tb/tb.v line 505
+run
+# ** Error: Assertion error.
+#    Time: 13727500 ps Started: 13727500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 72 Expr: not(t_i_wb_ack)
+# ** Error: Assertion error.
+#    Time: 13727500 ps Started: 13702500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 62 Expr: ~t_o_wb_we&t_o_wb_cyc&t_o_wb_stb&t_i_wb_ack
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run -all
+# 
+# ----------------------------------------------------------------------------
+# Amber Core
+#          User         FIRQ         IRQ        > SVC
+# r0       0x20000400
+# r1       0x0000X000
+# r2       0x000001c8
+# r3       0x00000000
+# r4       0x00000000
+# r5       0x00000000
+# r6       0x00000000
+# r7       0x00000000
+# r8       0x00000000   0xdeadbeef 
+# r9       0x00000000   0xdeadbeef 
+# r10      0x00000000   0xdeadbeef 
+# r11      0xdeadbeef   0xdeadbeef 
+# r12      0xdeadbeef   0xdeadbeef 
+# r13      0xdeadbeef   0xdeadbeef   0xdeadbeef   0xdeadbeef
+# r14 (lr) 0xdeadbeef   0xdeadbeef   0xdeadbeef   0xxXXXXXXf
+# r15 (pc) 0x0XxxxxxX
+# 
+# Status Bits: N=0, Z=x, C=1, V=0, IRQ Mask 1, FIRQ Mask 1, Mode =     Supervisor
+# ----------------------------------------------------------------------------
+# 
+# ++++++++++++++++++++
+# Failed ethmac_tx
+# ++++++++++++++++++++
+# ** Note: $finish    : ../vlog/tb/tb.v(505)
+#    Time: 13752500 ps  Iteration: 4  Instance: /tb
+# 1
+# Break in Module tb at ../vlog/tb/tb.v line 505
+add atv /tb/u_system/u_amber/u_wishbone/wrp/assert__Validate_Next_Clock_Cycle 13702500 ps
+add atv /tb/u_system/u_amber/u_wishbone/wrp/assert__Validate_Next_Clock_Cycle 13702500 ps
+run
+# ** Error: Assertion error.
+#    Time: 13752500 ps Started: 13752500 ps  Scope: tb.u_system.u_amber.u_wishbone.wrp File: ../vlog/tb/test.sv Line: 60 Expr: t_o_wb_cyc&t_o_wb_stb
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add atv /tb/u_system/u_amber/u_wishbone/wrp/assert__Validate_Next_Clock_Cycle 13702500 ps
+# Causality operation skipped due to absence of debug database file
+run -all
+# 
+# ----------------------------------------------------------------------------
+# Amber Core
+#          User         FIRQ         IRQ        > SVC
+# r0       0x20000400
+# r1       0x0000X000
+# r2       0x000001c8
+# r3       0x00000000
+# r4       0x00000000
+# r5       0x00000000
+# r6       0x00000000
+# r7       0x00000000
+# r8       0x00000000   0xdeadbeef 
+# r9       0x00000000   0xdeadbeef 
+# r10      0x00000000   0xdeadbeef 
+# r11      0xdeadbeef   0xdeadbeef 
+# r12      0xdeadbeef   0xdeadbeef 
+# r13      0xdeadbeef   0xdeadbeef   0xdeadbeef   0xdeadbeef
+# r14 (lr) 0xdeadbeef   0xdeadbeef   0xdeadbeef   0xxXXXXXXf
+# r15 (pc) 0x0XxxxxxX
+# 
+# Status Bits: N=0, Z=x, C=1, V=0, IRQ Mask 1, FIRQ Mask 1, Mode =     Supervisor
+# ----------------------------------------------------------------------------
+# 
+# ++++++++++++++++++++
+# Failed ethmac_tx
+# ++++++++++++++++++++
+# ** Note: $finish    : ../vlog/tb/tb.v(505)
+#    Time: 13777500 ps  Iteration: 4  Instance: /tb
+# 1
+# Break in Module tb at ../vlog/tb/tb.v line 505
+add atv /tb/u_system/u_amber/u_wishbone/wrp/assert__Validate_Next_Clock_Cycle 13702500 ps
+add atv /tb/u_system/u_amber/u_wishbone/wrp/assert__Validate_Next_Clock_Cycle 13752500 ps
+add atv /tb/u_system/u_amber/u_wishbone/wrp/assert__Validate_Next_Clock_Cycle 13702500 ps
+# End time: 10:02:46 on Mar 10,2019, Elapsed time: 128:41:20
+# Errors: 164, Warnings: 1

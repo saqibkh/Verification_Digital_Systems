@@ -1,0 +1,168 @@
+        9         0:   ldr     r0, [pc, #248]
+       12         4:   ldr     r1, [pc, #260]
+       15              read    addr 100, data 20000400 to r0
+       21              read    addr 110, data 00a02800 to r1
+       24         8:   str     r1, [r0]
+       27         c:   ldr     r1, [pc, #260]
+       36              write   addr 20000400, data 00a02800, be f
+       40              read    addr 118, data 28001000 to r1
+       43        10:   add     r1,  r1,  #2
+       46        14:   str     r1, [r0, #4]
+       49        18:   ldr     r1, [pc, #244]
+       56              write   addr 20000404, data 28001002, be f
+       60              read    addr 114, data 0000a800 to r1
+       63        1c:   str     r1, [r0, #512]
+       66        20:   ldr     r1, [pc, #244]
+       76              write   addr 20000600, data 0000a800, be f
+       80              read    addr 11c, data 28001200 to r1
+       83        24:   str     r1, [r0, #516]
+       86        28:   ldr     r0, [pc, #232]
+       96              write   addr 20000604, data 28001200, be f
+       97        2c:   ldr     r1, [pc, #432]
+      100              read    addr 118, data 28001000 to r0
+      103        30:   ldr     r2, [pc, #432]
+      106              read    addr 1e4, data 00000124 to r1
+      109        34:   ldmia   r1!, {r3, r4, r5, r6, r7, r8, r9, r10}
+      112              read    addr 1e8, data 000001c8 to r2
+      118              read    addr 124, data 0e000000 to r3
+      126              read    addr 128, data a0583e0c to r4
+      129              read    addr 12c, data 554e5300 to r5
+      132              read    addr 130, data 0008304c to r6
+      135              read    addr 134, data 90000045 to r7
+      138              read    addr 138, data 00400000 to r8
+      139              read    addr 13c, data d5b61140 to r9
+      142        38:   stmia   r0!, {r3, r4, r5, r6, r7, r8, r9, r10}
+      145              read    addr 140, data 0501a8c0 to r10
+      151              write   addr 28001000, data 0e000000, be f
+      152              write   addr 28001004, data a0583e0c, be f
+      153              write   addr 28001008, data 554e5300, be f
+      154              write   addr 2800100c, data 0008304c, be f
+      155              write   addr 28001010, data 90000045, be f
+      156              write   addr 28001014, data 00400000, be f
+      160              write   addr 28001018, data d5b61140, be f
+      161        3c:   cmp     r1,  r2
+      164              write   addr 2800101c, data 0501a8c0, be f
+      165        40:   blt     34
+      167              jump    from 40 to 34, r0 28001020, r1 00000144
+      174        34:   ldmia   r1!, {r3, r4, r5, r6, r7, r8, r9, r10}
+      180              read    addr 144, data 3201a8c0 to r3
+      188              read    addr 148, data 01080203 to r4
+      191              read    addr 14c, data b6c47c00 to r5
+      194              read    addr 150, data f67d4fc7 to r6
+      197              read    addr 154, data 00000000 to r7
+      200              read    addr 158, data 02000000 to r8
+      201              read    addr 15c, data a3860100 to r9
+      204        38:   stmia   r0!, {r3, r4, r5, r6, r7, r8, r9, r10}
+      207              read    addr 160, data 03000000 to r10
+      213              write   addr 28001020, data 3201a8c0, be f
+      214              write   addr 28001024, data 01080203, be f
+      215              write   addr 28001028, data b6c47c00, be f
+      216              write   addr 2800102c, data f67d4fc7, be f
+      217              write   addr 28001030, data 00000000, be f
+      218              write   addr 28001034, data 02000000, be f
+      222              write   addr 28001038, data a3860100, be f
+      223        3c:   cmp     r1,  r2
+      226              write   addr 2800103c, data 03000000, be f
+      227        40:   blt     34
+      229              jump    from 40 to 34, r0 28001040, r1 00000164
+      236        34:   ldmia   r1!, {r3, r4, r5, r6, r7, r8, r9, r10}
+      242              read    addr 164, data 06000000 to r3
+      250              read    addr 168, data 01000000 to r4
+      253              read    addr 16c, data 18000000 to r5
+      256              read    addr 170, data 025b8f02 to r6
+      259              read    addr 174, data 02000000 to r7
+      262              read    addr 178, data 00003170 to r8
+      263              read    addr 17c, data 00000000 to r9
+      266        38:   stmia   r0!, {r3, r4, r5, r6, r7, r8, r9, r10}
+      269              read    addr 180, data 00000000 to r10
+      275              write   addr 28001040, data 06000000, be f
+      276              write   addr 28001044, data 01000000, be f
+      277              write   addr 28001048, data 18000000, be f
+      278              write   addr 2800104c, data 025b8f02, be f
+      279              write   addr 28001050, data 02000000, be f
+      280              write   addr 28001054, data 00003170, be f
+      284              write   addr 28001058, data 00000000, be f
+      285        3c:   cmp     r1,  r2
+      288              write   addr 2800105c, data 00000000, be f
+      289        40:   blt     34
+      291              jump    from 40 to 34, r0 28001060, r1 00000184
+      298        34:   ldmia   r1!, {r3, r4, r5, r6, r7, r8, r9, r10}
+      304              read    addr 184, data 00000000 to r3
+      312              read    addr 188, data 00000000 to r4
+      315              read    addr 18c, data 00000000 to r5
+      318              read    addr 190, data 24000000 to r6
+      321              read    addr 194, data 01070001 to r7
+      324              read    addr 198, data 00143ed5 to r8
+      325              read    addr 19c, data 00000000 to r9
+      328        38:   stmia   r0!, {r3, r4, r5, r6, r7, r8, r9, r10}
+      331              read    addr 1a0, data 2c043c7f to r10
+      337              write   addr 28001060, data 00000000, be f
+      338              write   addr 28001064, data 00000000, be f
+      339              write   addr 28001068, data 00000000, be f
+      340              write   addr 2800106c, data 24000000, be f
+      341              write   addr 28001070, data 01070001, be f
+      342              write   addr 28001074, data 00143ed5, be f
+      346              write   addr 28001078, data 00000000, be f
+      347        3c:   cmp     r1,  r2
+      350              write   addr 2800107c, data 2c043c7f, be f
+      351        40:   blt     34
+      353              jump    from 40 to 34, r0 28001080, r1 000001a4
+      360        34:   ldmia   r1!, {r3, r4, r5, r6, r7, r8, r9, r10}
+      366              read    addr 1a4, data 6c41657c to r3
+      374              read    addr 1a8, data 8cc37e87 to r4
+      377              read    addr 1ac, data 2340a928 to r5
+      380              read    addr 1b0, data 0026048e to r6
+      383              read    addr 1b4, data ec587a0e to r7
+      386              read    addr 1b8, data 00000000 to r8
+      387              read    addr 1bc, data 00080000 to r9
+      390        38:   stmia   r0!, {r3, r4, r5, r6, r7, r8, r9, r10}
+      393              read    addr 1c0, data 00080000 to r10
+      399              write   addr 28001080, data 6c41657c, be f
+      400              write   addr 28001084, data 8cc37e87, be f
+      401              write   addr 28001088, data 2340a928, be f
+      402              write   addr 2800108c, data 0026048e, be f
+      403              write   addr 28001090, data ec587a0e, be f
+      404              write   addr 28001094, data 00000000, be f
+      408              write   addr 28001098, data 00080000, be f
+      409        3c:   cmp     r1,  r2
+      412              write   addr 2800109c, data 00080000, be f
+      413        40:   blt     34
+      415              jump    from 40 to 34, r0 280010a0, r1 000001c4
+      422        34:   ldmia   r1!, {r3, r4, r5, r6, r7, r8, r9, r10}
+      428              read    addr 1c4, data 00000000 to r3
+      436              read    addr 1c8, data 00000000 to r4
+      439              read    addr 1cc, data 00000000 to r5
+      442              read    addr 1d0, data 00000000 to r6
+      445              read    addr 1d4, data 00000000 to r7
+      448              read    addr 1d8, data 00000000 to r8
+      449              read    addr 1dc, data 00000000 to r9
+      452        38:   stmia   r0!, {r3, r4, r5, r6, r7, r8, r9, r10}
+      455              read    addr 1e0, data 00000000 to r10
+      461              write   addr 280010a0, data 00000000, be f
+      462              write   addr 280010a4, data 00000000, be f
+      463              write   addr 280010a8, data 00000000, be f
+      464              write   addr 280010ac, data 00000000, be f
+      465              write   addr 280010b0, data 00000000, be f
+      466              write   addr 280010b4, data 00000000, be f
+      470              write   addr 280010b8, data 00000000, be f
+      471        3c:   cmp     r1,  r2
+      474              write   addr 280010bc, data 00000000, be f
+      475        40:  -blt     34
+      478        44:   ldr     r0, [pc, #152]
+      481        48:   ldr     r1, [pc, #208]
+      484              read    addr e4, data 20000000 to r0
+      490              read    addr 120, data 0000a0a3 to r1
+      493        4c:   str     r1, [r0]
+      496        50:   ldr     r0, [pc, #168]
+      501              write   addr 20000000, data 0000a0a3, be f
+      502        54:   ldr     r1, [pc, #180]
+      505              read    addr 100, data 20000400 to r0
+      511              read    addr 110, data 00a02800 to r1
+      514        58:   orr     r1,  r1,  #0x00008000
+      517        5c:   str     r1, [r0]
+      520        60:   ldr     r1, [r0, #512]
+      528              write   addr 20000400, data 00a0a800, be f
+      537              read    addr 20000600, data xxxxxxxx to r1
+      539        64:   ands    r1,  r1,  #0x00008000
+      541        68:   cdpeq   
+      547  000000X4:   andeq   r3,  r8,  ip, asr #0

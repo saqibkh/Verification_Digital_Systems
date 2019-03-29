@@ -1,0 +1,579 @@
+vsim -c -do run.do
+Reading pref.tcl
+
+# 10.6
+
+# do run.do
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 11:55:25 on Mar 21,2019
+# vlog ../dut/ALU_netlist.v ../lib/gscl45nm.v 
+# -- Compiling module add_unsigned_6
+# -- Compiling module add_unsigned_carry_1
+# -- Compiling module add_unsigned_carry_28
+# -- Compiling module add_unsigned_carry
+# -- Compiling module gt_signed
+# -- Compiling module geq_signed
+# -- Compiling module increment_unsigned
+# -- Compiling module lt_signed
+# -- Compiling module leq_signed
+# -- Compiling module shift_left_vlog_unsigned
+# -- Compiling module shift_left_vlog_unsigned_1
+# -- Compiling module shift_right_vlog_unsigned
+# -- Compiling module shift_right_vlog_unsigned_623
+# -- Compiling module shift_right_vlog_unsigned_784
+# -- Compiling module shift_right_vlog_unsigned_784_1
+# -- Compiling module ALU
+# -- Compiling module AND2X1
+# -- Compiling module AND2X2
+# -- Compiling module AOI21X1
+# -- Compiling module AOI22X1
+# -- Compiling module BUFX2
+# -- Compiling module BUFX4
+# -- Compiling module CLKBUF1
+# -- Compiling module CLKBUF2
+# -- Compiling module CLKBUF3
+# -- Compiling module DFFNEGX1
+# -- Compiling module DFFPOSX1
+# -- Compiling module DFFSR
+# -- Compiling module FAX1
+# -- Compiling module HAX1
+# -- Compiling module INVX1
+# -- Compiling module INVX2
+# -- Compiling module INVX4
+# -- Compiling module INVX8
+# -- Compiling module LATCH
+# -- Compiling module MUX2X1
+# -- Compiling module NAND2X1
+# -- Compiling module NAND3X1
+# -- Compiling module NOR2X1
+# -- Compiling module NOR3X1
+# -- Compiling module OAI21X1
+# -- Compiling module OAI22X1
+# -- Compiling module OR2X1
+# -- Compiling module OR2X2
+# -- Compiling module TBUFX1
+# -- Compiling module TBUFX2
+# -- Compiling module XNOR2X1
+# -- Compiling module XOR2X1
+# -- Compiling UDP udp_dff
+# -- Compiling UDP udp_tlat
+# -- Compiling UDP udp_rslat
+# -- Compiling UDP udp_mux2
+# 
+# Top level modules:
+# 	ALU
+# 	AND2X2
+# 	BUFX4
+# 	CLKBUF1
+# 	CLKBUF2
+# 	CLKBUF3
+# 	DFFNEGX1
+# 	DFFSR
+# 	INVX2
+# 	INVX4
+# 	INVX8
+# 	LATCH
+# 	OAI22X1
+# 	TBUFX1
+# 	TBUFX2
+# End time: 11:55:26 on Mar 21,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 11:55:26 on Mar 21,2019
+# vlog "+cover" -sv ../tb/interfaces.sv ../tb/sequences.sv ../tb/coverage.sv ../tb/scoreboard.sv ../tb/modules.sv ../tb/tests.sv ../tb/tb.sv 
+# -- Compiling interface dut_in
+# -- Compiling interface dut_out
+# ** Note: (vlog-2286) ../tb/sequences.sv(1): Using implicit +incdir+/misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Compiling package sequences
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Compiling package coverage
+# -- Importing package sequences
+# -- Compiling package scoreboard
+# -- Compiling package modules_pkg
+# -- Importing package coverage
+# -- Importing package scoreboard
+# -- Compiling package tests
+# -- Importing package modules_pkg
+# -- Compiling package tb_sv_unit
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Importing package modules_pkg
+# -- Importing package sequences
+# -- Importing package coverage
+# -- Importing package scoreboard
+# -- Importing package tests
+# -- Compiling module dut
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 11:55:27 on Mar 21,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -c top 
+# Start time: 11:55:27 on Mar 21,2019
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 10.6 Dec 13 2016Linux 2.6.32-754.3.5.el6.x86_64
+# //
+# //  Copyright 1991-2016 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.dut_in(fast)
+# Loading work.dut_out(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.sequences(fast)
+# Loading work.scoreboard(fast)
+# Loading work.coverage(fast)
+# Loading work.modules_pkg(fast)
+# Loading work.tests(fast)
+# Loading work.tb_sv_unit(fast)
+# Loading work.top(fast)
+# Loading work.ALU(fast)
+# Loading work.INVX1(fast)
+# Loading work.HAX1(fast)
+# Loading work.AOI21X1(fast)
+# Loading work.AND2X1(fast)
+# Loading work.BUFX2(fast)
+# Loading work.FAX1(fast)
+# Loading work.XOR2X1(fast)
+# Loading work.OAI21X1(fast)
+# Loading work.AOI22X1(fast)
+# Loading work.NAND2X1(fast)
+# Loading work.NOR2X1(fast)
+# Loading work.OR2X1(fast)
+# Loading work.NAND3X1(fast)
+# Loading work.MUX2X1(fast)
+# Loading work.NOR3X1(fast)
+# Loading work.XNOR2X1(fast)
+# Loading work.DFFPOSX1(fast)
+# Loading work.OR2X2(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading /misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/uvm-1.1d/linux_x86_64/uvm_dpi.so
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test test1...
+# ** Warning: (vsim-8474) ../tb/coverage.sv(63): A higher value '32' is found in bin 'op32' of Coverpoint 'covlabel_4'. It is invalid and will be ignored.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# ** Warning: (vsim-8549) After dropping the illegal, ignore or invalid values, the values list associated with scalar bin 'op32' in Coverpoint 'covlabel_4' of Covergroup instance '\/coverage::alu_subscriber_in::inputs ' has converged to empty list. The bin will be taken out of coverage calculation.
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# UVM_INFO ../tb/scoreboard.sv(70) @ 45000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =00110100100011001000110101000001 B =10110100111010101110100001010111 CIN =1 Opcode =10111
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 65000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =11000011010011000010100011000111 B =00001010000010110101100101000011 CIN =1 Opcode =00011
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 75000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =01100011110010100100000100011001 B =00101101110000010111100101001001 CIN =1 Opcode =01100
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 95000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =10111111100000011101010001001010 B =11010011011111000110111110110100 CIN =0 Opcode =11101
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 145000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =00110100110100010101111101000011 B =10111000010110001110000010101001 CIN =1 Opcode =11000
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 205000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =01010001001100011111011101000100 B =01111010010110001000101110010111 CIN =1 Opcode =00001
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 225000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =01100000110001011001011101000010 B =00111100100101111010111111100000 CIN =1 Opcode =00011
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 245000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =00000001101010010100000000000110 B =00110110010111111011111001011000 CIN =1 Opcode =01110
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 255000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =0 A =01101001011100010110100011010100 B =11001101010110011110010100001111 CIN =1 Opcode =00010
+# Actual Outputs 
+#  COUT =1 VOUT =1 OUT =11101101011110011110110111011111
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 265000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =11110011101000000010100101110000 B =00000001000100010110010000001000 CIN =1 Opcode =01010
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 275000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =01011000110000110010100100011011 B =11010001100011010101110111000111 CIN =0 Opcode =10010
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 285000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =10111101111100011101001010000011 B =11100101010111100011000110111101 CIN =1 Opcode =11010
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 305000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =01111111010100110001000001110011 B =11110111110101010101100001011010 CIN =1 Opcode =00111
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 315000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =10100111001101100010100101100110 B =11101000011110001010110000011110 CIN =0 Opcode =00101
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 335000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =11110111001000010001111001010010 B =00111001110011011000111000000001 CIN =1 Opcode =10101
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 365000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =01101000001101111010110101111001 B =10110111010011000111011101001100 CIN =0 Opcode =10110
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 395000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =00011011110101110000001111111101 B =11011101101111001111100010100110 CIN =0 Opcode =10110
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 405000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =00011001101001100010000101000010 B =00001111100001010001110001111100 CIN =0 Opcode =01111
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 415000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =10010010101011101100111110110001 B =00100110011100110000010101110110 CIN =0 Opcode =01011
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 485000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =00100000001110100001000000000100 B =00100011000001011001001000110100 CIN =0 Opcode =01010
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 495000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =00101001010111001100110000011000 B =01011000000111001111100110000011 CIN =0 Opcode =10001
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 505000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =01010101010011010101010111111011 B =10111010110110101011010011011010 CIN =1 Opcode =11000
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 515000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =11010011111100010110110101000100 B =00011100011110011010101111110010 CIN =1 Opcode =00111
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 525000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =11111011110010011010001101101111 B =11010101000010001111111000011000 CIN =1 Opcode =11010
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 545000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =10001010011000110110000011001001 B =11001011000010100111110110111011 CIN =0 Opcode =11111
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 605000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =11101011010111001110111011001001 B =00111100010011010010110010010100 CIN =1 Opcode =11111
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 615000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =10011110000000000110010101001101 B =10100101101100111111011001000001 CIN =1 Opcode =10011
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 625000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =01010001111100011111111011101111 B =01101001011001110000100000101111 CIN =0 Opcode =01010
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 635000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =11010110011111010101000111100000 B =01111100001000010110011110000100 CIN =1 Opcode =01111
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 645000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =10000001000101001001111100111010 B =00111100111000101010110010101010 CIN =0 Opcode =11101
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 675000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =10011010010100100010100101110110 B =01111000000001001100110010001011 CIN =1 Opcode =01011
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 695000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =10110000101011101001101101111010 B =10000101001111000000000101101101 CIN =0 Opcode =01000
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 705000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =11000101001010101110001101011001 B =11011101110001011101000110100101 CIN =1 Opcode =10101
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 715000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =01111011111100101010100010011110 B =01011100111100000100011010111100 CIN =1 Opcode =11110
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 735000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =10001011011111100101000001011011 B =10101100111001010001001010111010 CIN =1 Opcode =01101
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 755000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =01011001110001100100011110111001 B =01100101000101100000111010100011 CIN =1 Opcode =10000
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 765000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =00110100001010011111111110000100 B =11010110110110011111100100010111 CIN =1 Opcode =00111
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 775000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =01110011010111100101000011100011 B =00110110110001010011001000100101 CIN =0 Opcode =11001
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 835000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =00111110100110111100010100101110 B =10111110010001011111100101010101 CIN =1 Opcode =11000
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 845000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =00011011100000101101100100011011 B =11100011011010100010101000100010 CIN =0 Opcode =10001
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 865000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =11101000011010001110100100101111 B =11100101100110001101010111010001 CIN =0 Opcode =10111
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 875000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =10001100111110100111101101010010 B =11100010110111000000001100100111 CIN =1 Opcode =11111
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 895000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =11110110000101011001010111101101 B =11110100000000010011011010100000 CIN =0 Opcode =01111
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 905000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =11001001011010110000010010000000 B =11110101100010001000111110100111 CIN =0 Opcode =00100
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 965000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =01101000011010011011110010111100 B =11011010000100001111110000010110 CIN =1 Opcode =01011
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 975000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =11000000001110110001110111101110 B =01101101111101000110010010110011 CIN =0 Opcode =11010
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO ../tb/scoreboard.sv(70) @ 995000: uvm_test_top.alu_env_h.alu_scoreboard_h [1] 
+# Actual Input Values  
+#  RST =1 A =00100111101111011011011110100000 B =00000011110000110110101111011001 CIN =1 Opcode =01011
+# Actual Outputs 
+#  COUT =0 VOUT =1 OUT =00000000000000000000000000000000
+# Expected Output 
+#  COUT =0 VOUT =0 OUT =00000000000000000000000000000000 
+# 
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 995000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   51
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [1]    47
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# ** Note: $finish    : /misc/linuxws/packages/mentor_2016/modelsim10.6/modeltech/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 9950 ns  Iteration: 70  Instance: /top
+# End time: 11:55:34 on Mar 21,2019, Elapsed time: 0:00:07
+# Errors: 0, Warnings: 2

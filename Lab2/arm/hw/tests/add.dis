@@ -1,0 +1,72 @@
+
+add.elf:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	e3a01003 	mov	r1, #3
+   4:	e3a02001 	mov	r2, #1
+   8:	e0813002 	add	r3, r1, r2
+   c:	e3530004 	cmp	r3, #4
+  10:	13a0a00a 	movne	sl, #10
+  14:	1a000026 	bne	b4 <testfail>
+  18:	e3a04000 	mov	r4, #0
+  1c:	e3a05000 	mov	r5, #0
+  20:	e0856004 	add	r6, r5, r4
+  24:	e3560000 	cmp	r6, #0
+  28:	13a0a014 	movne	sl, #20
+  2c:	1a000020 	bne	b4 <testfail>
+  30:	e3a07000 	mov	r7, #0
+  34:	e3e08000 	mvn	r8, #0
+  38:	e0879008 	add	r9, r7, r8
+  3c:	e3790001 	cmn	r9, #1
+  40:	13a0a01e 	movne	sl, #30
+  44:	1a00001a 	bne	b4 <testfail>
+  48:	e3e01000 	mvn	r1, #0
+  4c:	e3a02000 	mov	r2, #0
+  50:	e0813002 	add	r3, r1, r2
+  54:	e3730001 	cmn	r3, #1
+  58:	13a0a028 	movne	sl, #40	; 0x28
+  5c:	1a000014 	bne	b4 <testfail>
+  60:	e3e04000 	mvn	r4, #0
+  64:	e3e05000 	mvn	r5, #0
+  68:	e0846005 	add	r6, r4, r5
+  6c:	e3760002 	cmn	r6, #2
+  70:	13a0a032 	movne	sl, #50	; 0x32
+  74:	1a00000e 	bne	b4 <testfail>
+  78:	e3e07000 	mvn	r7, #0
+  7c:	e3e080fe 	mvn	r8, #254	; 0xfe
+  80:	e0879008 	add	r9, r7, r8
+  84:	e3790c01 	cmn	r9, #256	; 0x100
+  88:	13a0a03c 	movne	sl, #60	; 0x3c
+  8c:	1a000008 	bne	b4 <testfail>
+  90:	e59f103c 	ldr	r1, [pc, #60]	; d4 <MaxPos>
+  94:	e3a02001 	mov	r2, #1
+  98:	e0913002 	adds	r3, r1, r2
+  9c:	7a000004 	bvc	b4 <testfail>
+  a0:	e59f0030 	ldr	r0, [pc, #48]	; d8 <MaxNeg>
+  a4:	e1500003 	cmp	r0, r3
+  a8:	13a0a046 	movne	sl, #70	; 0x46
+  ac:	1a000000 	bne	b4 <testfail>
+  b0:	ea000002 	b	c0 <testpass>
+
+000000b4 <testfail>:
+  b4:	e59fb014 	ldr	fp, [pc, #20]	; d0 <AdrTestStatus>
+  b8:	e58ba000 	str	sl, [fp]
+  bc:	eafffffc 	b	b4 <testfail>
+
+000000c0 <testpass>:
+  c0:	e59fb008 	ldr	fp, [pc, #8]	; d0 <AdrTestStatus>
+  c4:	e3a0a011 	mov	sl, #17
+  c8:	e58ba000 	str	sl, [fp]
+  cc:	eafffffb 	b	c0 <testpass>
+
+000000d0 <AdrTestStatus>:
+  d0:	f0000000 	.word	0xf0000000
+
+000000d4 <MaxPos>:
+  d4:	7fffffff 	.word	0x7fffffff
+
+000000d8 <MaxNeg>:
+  d8:	80000000 	.word	0x80000000

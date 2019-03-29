@@ -1,0 +1,42 @@
+
+barrel_shift_rs.elf:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	e3a01008 	mov	r1, #8
+   4:	e3a03000 	mov	r3, #0
+   8:	e1a01331 	lsr	r1, r1, r3
+   c:	e3510008 	cmp	r1, #8
+  10:	13a0a00a 	movne	sl, #10
+  14:	1a00000e 	bne	54 <testfail>
+  18:	e1a0400f 	mov	r4, pc
+  1c:	e3844202 	orr	r4, r4, #536870912	; 0x20000000
+  20:	e13ff004 	teq	pc, r4
+  24:	e1a0700f 	mov	r7, pc
+  28:	e2177202 	ands	r7, r7, #536870912	; 0x20000000
+  2c:	03a0a014 	moveq	sl, #20
+  30:	0a000007 	beq	54 <testfail>
+  34:	e3a0110f 	mov	r1, #-1073741821	; 0xc0000003
+  38:	e3a030ff 	mov	r3, #255	; 0xff
+  3c:	e1b01331 	lsrs	r1, r1, r3
+  40:	e1a0400f 	mov	r4, pc
+  44:	e2144202 	ands	r4, r4, #536870912	; 0x20000000
+  48:	13a0a01e 	movne	sl, #30
+  4c:	1a000000 	bne	54 <testfail>
+  50:	ea000002 	b	60 <testpass>
+
+00000054 <testfail>:
+  54:	e59fb014 	ldr	fp, [pc, #20]	; 70 <AdrTestStatus>
+  58:	e58ba000 	str	sl, [fp]
+  5c:	eafffffc 	b	54 <testfail>
+
+00000060 <testpass>:
+  60:	e59fb008 	ldr	fp, [pc, #8]	; 70 <AdrTestStatus>
+  64:	e3a0a011 	mov	sl, #17
+  68:	e58ba000 	str	sl, [fp]
+  6c:	eafffffb 	b	60 <testpass>
+
+00000070 <AdrTestStatus>:
+  70:	f0000000 	.word	0xf0000000

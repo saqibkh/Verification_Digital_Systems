@@ -1,0 +1,27 @@
+
+bcc.elf:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	e3a00004 	mov	r0, #4
+   4:	e3a01005 	mov	r1, #5
+   8:	e2500003 	subs	r0, r0, #3
+   c:	33a0a00a 	movcc	sl, #10
+  10:	3a000000 	bcc	18 <testfail>
+  14:	2a000002 	bcs	24 <testpass>
+
+00000018 <testfail>:
+  18:	e59fb014 	ldr	fp, [pc, #20]	; 34 <AdrTestStatus>
+  1c:	e58ba000 	str	sl, [fp]
+  20:	eafffffc 	b	18 <testfail>
+
+00000024 <testpass>:
+  24:	e59fb008 	ldr	fp, [pc, #8]	; 34 <AdrTestStatus>
+  28:	e3a0a011 	mov	sl, #17
+  2c:	e58ba000 	str	sl, [fp]
+  30:	eafffffb 	b	24 <testpass>
+
+00000034 <AdrTestStatus>:
+  34:	f0000000 	.word	0xf0000000

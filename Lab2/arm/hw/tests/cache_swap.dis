@@ -1,0 +1,70 @@
+
+cache_swap.elf:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	e3e00000 	mvn	r0, #0
+   4:	ee030f10 	mcr	15, 0, r0, cr3, cr0, {0}
+   8:	e3a00001 	mov	r0, #1
+   c:	ee020f10 	mcr	15, 0, r0, cr2, cr0, {0}
+  10:	e1a00000 	nop			; (mov r0, r0)
+  14:	e1a00000 	nop			; (mov r0, r0)
+  18:	e59f2090 	ldr	r2, [pc, #144]	; b0 <AdrTestBase>
+  1c:	e3a03000 	mov	r3, #0
+
+00000020 <write_loop>:
+  20:	e4823004 	str	r3, [r2], #4
+  24:	e2833001 	add	r3, r3, #1
+  28:	e3530b01 	cmp	r3, #1024	; 0x400
+  2c:	1afffffb 	bne	20 <write_loop>
+  30:	e59f2078 	ldr	r2, [pc, #120]	; b0 <AdrTestBase>
+  34:	e3a03000 	mov	r3, #0
+  38:	e3a00000 	mov	r0, #0
+
+0000003c <read1_loop>:
+  3c:	e4921004 	ldr	r1, [r2], #4
+  40:	e0800001 	add	r0, r0, r1
+  44:	e2833001 	add	r3, r3, #1
+  48:	e3530b01 	cmp	r3, #1024	; 0x400
+  4c:	1afffffa 	bne	3c <read1_loop>
+  50:	e59f405c 	ldr	r4, [pc, #92]	; b4 <MagicNumber1024>
+  54:	e1500004 	cmp	r0, r4
+  58:	13a0a00a 	movne	sl, #10
+  5c:	1a00000b 	bne	90 <testfail>
+  60:	e59f0048 	ldr	r0, [pc, #72]	; b0 <AdrTestBase>
+  64:	e3a02011 	mov	r2, #17
+  68:	e1002092 	swp	r2, r2, [r0]
+  6c:	e3a03000 	mov	r3, #0
+  70:	e1530002 	cmp	r3, r2
+  74:	13a0a014 	movne	sl, #20
+  78:	1a000004 	bne	90 <testfail>
+  7c:	e5904000 	ldr	r4, [r0]
+  80:	e3540011 	cmp	r4, #17
+  84:	13a0a01e 	movne	sl, #30
+  88:	1a000000 	bne	90 <testfail>
+  8c:	ea000002 	b	9c <testpass>
+
+00000090 <testfail>:
+  90:	e59fb014 	ldr	fp, [pc, #20]	; ac <AdrTestStatus>
+  94:	e58ba000 	str	sl, [fp]
+  98:	eafffffc 	b	90 <testfail>
+
+0000009c <testpass>:
+  9c:	e59fb008 	ldr	fp, [pc, #8]	; ac <AdrTestStatus>
+  a0:	e3a0a011 	mov	sl, #17
+  a4:	e58ba000 	str	sl, [fp]
+  a8:	eafffffb 	b	9c <testpass>
+
+000000ac <AdrTestStatus>:
+  ac:	f0000000 	.word	0xf0000000
+
+000000b0 <AdrTestBase>:
+  b0:	00020000 	.word	0x00020000
+
+000000b4 <MagicNumber1024>:
+  b4:	0007fe00 	.word	0x0007fe00
+
+000000b8 <MagicNumber2048>:
+  b8:	001ffc00 	.word	0x001ffc00

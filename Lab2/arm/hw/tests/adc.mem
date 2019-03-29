@@ -1,0 +1,39 @@
+// Section name .text
+//  Type SHT_PROGBITS, Size 0x74, Start address 0x00000000, File offset 0x8000
+@00000000 e59f0058
+@00000004 e59f1058
+@00000008 e59f2058
+@0000000c e59f3058
+@00000010 e59f4058
+@00000014 e0b08001
+@00000018 e0a88003
+@0000001c e1a0500f
+@00000020 e205520f
+@00000024 e3550209
+@00000028 13a0a00a
+@0000002c 1a000003
+@00000030 e1580004
+@00000034 13a0a014
+@00000038 1a000000
+@0000003c ea000002
+@00000040 e59fb014
+@00000044 e58ba000
+@00000048 eafffffc
+@0000004c e59fb008
+@00000050 e3a0a011
+@00000054 e58ba000
+@00000058 eafffffb
+@0000005c f0000000
+@00000060 40000000
+@00000064 40000000
+@00000068 10000000
+@0000006c 10000000
+@00000070 90000000
+// Section name .ARM.attributes
+//  Type ???, Size 0x1a, Start address 0x00000000, File offset 0x8074
+// Section name .shstrtab
+//  Type SHT_STRTAB, Size 0x31, Start address 0x00000000, File offset 0x808e
+// Section name .symtab
+//  Type SHT_SYMTAB, Size 0xf0, Start address 0x00000000, File offset 0x81b0
+// Section name .strtab
+//  Type SHT_STRTAB, Size 0x54, Start address 0x00000000, File offset 0x82a0

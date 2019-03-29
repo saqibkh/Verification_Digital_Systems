@@ -1,0 +1,78 @@
+
+addr_ex.elf:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	ea000006 	b	20 <start>
+   4:	ea000028 	b	ac <testfail>
+   8:	ea000027 	b	ac <testfail>
+   c:	ea000026 	b	ac <testfail>
+  10:	ea000025 	b	ac <testfail>
+  14:	ea000015 	b	70 <service_addr_ex>
+  18:	ea000023 	b	ac <testfail>
+  1c:	ea000022 	b	ac <testfail>
+
+00000020 <start>:
+  20:	e33ff303 	teq	pc, #201326592	; 0xc000000
+  24:	e3a00000 	mov	r0, #0
+  28:	e3a08000 	mov	r8, #0
+  2c:	e3a00301 	mov	r0, #67108864	; 0x4000000
+  30:	e2400004 	sub	r0, r0, #4
+  34:	e59f302c 	ldr	r3, [pc, #44]	; 68 <no_op>
+  38:	e4803004 	str	r3, [r0], #4
+  3c:	e4803004 	str	r3, [r0], #4
+  40:	e4803004 	str	r3, [r0], #4
+  44:	e3a00301 	mov	r0, #67108864	; 0x4000000
+  48:	e2400004 	sub	r0, r0, #4
+  4c:	e1a0100f 	mov	r1, pc
+  50:	e59fd078 	ldr	sp, [pc, #120]	; d0 <PCMask>
+  54:	e1c1100d 	bic	r1, r1, sp
+  58:	e1812000 	orr	r2, r1, r0
+
+0000005c <pos1>:
+  5c:	e1a0f002 	mov	pc, r2
+  60:	ea000011 	b	ac <testfail>
+  64:	ea000010 	b	ac <testfail>
+
+00000068 <no_op>:
+  68:	e1a00000 	nop			; (mov r0, r0)
+  6c:	e1a00000 	nop			; (mov r0, r0)
+
+00000070 <service_addr_ex>:
+  70:	e1a0500f 	mov	r5, pc
+  74:	e2055003 	and	r5, r5, #3
+  78:	e3550003 	cmp	r5, #3
+  7c:	13a0a00a 	movne	sl, #10
+  80:	1a000009 	bne	ac <testfail>
+  84:	e59fd044 	ldr	sp, [pc, #68]	; d0 <PCMask>
+  88:	e00dd00e 	and	sp, sp, lr
+  8c:	e35d0008 	cmp	sp, #8
+  90:	13a0a014 	movne	sl, #20
+  94:	1a000004 	bne	ac <testfail>
+  98:	e20ed303 	and	sp, lr, #201326592	; 0xc000000
+  9c:	e35d0303 	cmp	sp, #201326592	; 0xc000000
+  a0:	13a0a01e 	movne	sl, #30
+  a4:	1a000000 	bne	ac <testfail>
+  a8:	ea000002 	b	b8 <testpass>
+
+000000ac <testfail>:
+  ac:	e59fb014 	ldr	fp, [pc, #20]	; c8 <AdrTestStatus>
+  b0:	e58ba000 	str	sl, [fp]
+  b4:	eafffffc 	b	ac <testfail>
+
+000000b8 <testpass>:
+  b8:	e59fb008 	ldr	fp, [pc, #8]	; c8 <AdrTestStatus>
+  bc:	e3a0a011 	mov	sl, #17
+  c0:	e58ba000 	str	sl, [fp]
+  c4:	eafffffb 	b	b8 <testpass>
+
+000000c8 <AdrTestStatus>:
+  c8:	f0000000 	.word	0xf0000000
+
+000000cc <Adrpos1>:
+  cc:	0000005c 	.word	0x0000005c
+
+000000d0 <PCMask>:
+  d0:	03fffffc 	.word	0x03fffffc

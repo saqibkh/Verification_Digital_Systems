@@ -1,0 +1,110 @@
+
+cache_swap_bug.elf:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	e3a0d004 	mov	sp, #4
+
+00000004 <big_loop>:
+   4:	e59f9128 	ldr	r9, [pc, #296]	; 134 <Loc1>
+   8:	e089900d 	add	r9, r9, sp
+   c:	e1a0b009 	mov	fp, r9
+  10:	e59f8120 	ldr	r8, [pc, #288]	; 138 <Adrseq>
+  14:	e59fa120 	ldr	sl, [pc, #288]	; 13c <Adrseqend>
+
+00000018 <copy>:
+  18:	e8b800ff 	ldm	r8!, {r0, r1, r2, r3, r4, r5, r6, r7}
+  1c:	e8ab00ff 	stmia	fp!, {r0, r1, r2, r3, r4, r5, r6, r7}
+  20:	e158000a 	cmp	r8, sl
+  24:	bafffffb 	blt	18 <copy>
+  28:	e3e00000 	mvn	r0, #0
+  2c:	ee030f10 	mcr	15, 0, r0, cr3, cr0, {0}
+  30:	e3a00001 	mov	r0, #1
+  34:	ee020f10 	mcr	15, 0, r0, cr2, cr0, {0}
+  38:	e1a00000 	nop			; (mov r0, r0)
+  3c:	e1a00000 	nop			; (mov r0, r0)
+  40:	ee010f10 	mcr	15, 0, r0, cr1, cr0, {0}
+  44:	e1a00000 	nop			; (mov r0, r0)
+  48:	e1a00000 	nop			; (mov r0, r0)
+  4c:	e1a0e00f 	mov	lr, pc
+  50:	e1a0f009 	mov	pc, r9
+
+00000054 <return>:
+  54:	e5953000 	ldr	r3, [r5]
+  58:	e3530000 	cmp	r3, #0
+  5c:	13a0a00a 	movne	sl, #10
+  60:	1a00002c 	bne	118 <testfail>
+  64:	e35d0028 	cmp	sp, #40	; 0x28
+  68:	0a00002d 	beq	124 <testpass>
+  6c:	e28dd004 	add	sp, sp, #4
+  70:	e1a0000d 	mov	r0, sp
+  74:	eaffffe2 	b	4 <big_loop>
+
+00000078 <seq>:
+  78:	e3a050c0 	mov	r5, #192	; 0xc0
+  7c:	e3855c32 	orr	r5, r5, #12800	; 0x3200
+  80:	e38558ff 	orr	r5, r5, #16711680	; 0xff0000
+  84:	e3855407 	orr	r5, r5, #117440512	; 0x7000000
+  88:	e5958000 	ldr	r8, [r5]
+  8c:	e3a0c000 	mov	ip, #0
+  90:	e3a02001 	mov	r2, #1
+  94:	e5852000 	str	r2, [r5]
+  98:	e1a00000 	nop			; (mov r0, r0)
+  9c:	e1a00000 	nop			; (mov r0, r0)
+  a0:	e1a00000 	nop			; (mov r0, r0)
+  a4:	e1a00000 	nop			; (mov r0, r0)
+  a8:	e5852004 	str	r2, [r5, #4]
+  ac:	e1a00000 	nop			; (mov r0, r0)
+  b0:	e1a00000 	nop			; (mov r0, r0)
+  b4:	e1a00000 	nop			; (mov r0, r0)
+  b8:	e1a00000 	nop			; (mov r0, r0)
+  bc:	e585c004 	str	ip, [r5, #4]
+  c0:	e1a00000 	nop			; (mov r0, r0)
+  c4:	e1a00000 	nop			; (mov r0, r0)
+  c8:	e1a00000 	nop			; (mov r0, r0)
+  cc:	e1a00000 	nop			; (mov r0, r0)
+  d0:	e1a00000 	nop			; (mov r0, r0)
+  d4:	e1a00000 	nop			; (mov r0, r0)
+  d8:	e585c008 	str	ip, [r5, #8]
+  dc:	e105309c 	swp	r3, ip, [r5]
+  e0:	e1a00000 	nop			; (mov r0, r0)
+  e4:	e1a00000 	nop			; (mov r0, r0)
+  e8:	e1a00000 	nop			; (mov r0, r0)
+  ec:	e1a00000 	nop			; (mov r0, r0)
+  f0:	e5953008 	ldr	r3, [r5, #8]
+  f4:	e1a00000 	nop			; (mov r0, r0)
+  f8:	e1a00000 	nop			; (mov r0, r0)
+  fc:	e1a00000 	nop			; (mov r0, r0)
+ 100:	e1a00000 	nop			; (mov r0, r0)
+ 104:	e1a0f00e 	mov	pc, lr
+ 108:	e1a00000 	nop			; (mov r0, r0)
+ 10c:	e1a00000 	nop			; (mov r0, r0)
+ 110:	e1a00000 	nop			; (mov r0, r0)
+
+00000114 <seqend>:
+ 114:	e1a00000 	nop			; (mov r0, r0)
+
+00000118 <testfail>:
+ 118:	e59fb020 	ldr	fp, [pc, #32]	; 140 <AdrTestStatus>
+ 11c:	e58ba000 	str	sl, [fp]
+ 120:	eafffffc 	b	118 <testfail>
+
+00000124 <testpass>:
+ 124:	e59fb014 	ldr	fp, [pc, #20]	; 140 <AdrTestStatus>
+ 128:	e3a0a011 	mov	sl, #17
+ 12c:	e58ba000 	str	sl, [fp]
+ 130:	eafffffb 	b	124 <testpass>
+
+00000134 <Loc1>:
+ 134:	00000200 	.word	0x00000200
+
+00000138 <Adrseq>:
+ 138:	00000078 	.word	0x00000078
+
+0000013c <Adrseqend>:
+ 13c:	00000114 	.word	0x00000114
+
+00000140 <AdrTestStatus>:
+ 140:	f0000000 	.word	0xf0000000

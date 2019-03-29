@@ -1,0 +1,57 @@
+
+cacheable_area.elf:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	e3a00001 	mov	r0, #1
+   4:	ee030f10 	mcr	15, 0, r0, cr3, cr0, {0}
+   8:	e3a00001 	mov	r0, #1
+   c:	ee020f10 	mcr	15, 0, r0, cr2, cr0, {0}
+  10:	e1a00000 	nop			; (mov r0, r0)
+  14:	e1a00000 	nop			; (mov r0, r0)
+  18:	e59f0064 	ldr	r0, [pc, #100]	; 84 <AdrTestBase>
+  1c:	e3a02020 	mov	r2, #32
+  20:	e2522001 	subs	r2, r2, #1
+  24:	e4802004 	str	r2, [r0], #4
+  28:	1afffffc 	bne	20 <main+0x20>
+  2c:	e3a07003 	mov	r7, #3
+
+00000030 <loop>:
+  30:	e59f304c 	ldr	r3, [pc, #76]	; 84 <AdrTestBase>
+  34:	e3a05020 	mov	r5, #32
+  38:	e3a06000 	mov	r6, #0
+  3c:	e4934004 	ldr	r4, [r3], #4
+  40:	e0866004 	add	r6, r6, r4
+  44:	e2555001 	subs	r5, r5, #1
+  48:	1afffffb 	bne	3c <loop+0xc>
+  4c:	e3560e1f 	cmp	r6, #496	; 0x1f0
+  50:	13a0a00a 	movne	sl, #10
+  54:	1a000002 	bne	64 <testfail>
+  58:	e2577001 	subs	r7, r7, #1
+  5c:	1afffff3 	bne	30 <loop>
+  60:	ea000002 	b	70 <testpass>
+
+00000064 <testfail>:
+  64:	e59fb014 	ldr	fp, [pc, #20]	; 80 <AdrTestStatus>
+  68:	e58ba000 	str	sl, [fp]
+  6c:	eafffffc 	b	64 <testfail>
+
+00000070 <testpass>:
+  70:	e59fb008 	ldr	fp, [pc, #8]	; 80 <AdrTestStatus>
+  74:	e3a0a011 	mov	sl, #17
+  78:	e58ba000 	str	sl, [fp]
+  7c:	eafffffb 	b	70 <testpass>
+
+00000080 <AdrTestStatus>:
+  80:	f0000000 	.word	0xf0000000
+
+00000084 <AdrTestBase>:
+  84:	001fffc0 	.word	0x001fffc0
+
+00000088 <MagicNumber1024>:
+  88:	0007fe00 	.word	0x0007fe00
+
+0000008c <MagicNumber2048>:
+  8c:	001ffc00 	.word	0x001ffc00

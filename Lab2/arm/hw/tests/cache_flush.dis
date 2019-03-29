@@ -1,0 +1,61 @@
+
+cache_flush.elf:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	e3a00001 	mov	r0, #1
+   4:	ee030f10 	mcr	15, 0, r0, cr3, cr0, {0}
+   8:	e3a00001 	mov	r0, #1
+   c:	ee020f10 	mcr	15, 0, r0, cr2, cr0, {0}
+  10:	e1a00000 	nop			; (mov r0, r0)
+  14:	e1a00000 	nop			; (mov r0, r0)
+  18:	e59f0074 	ldr	r0, [pc, #116]	; 94 <AdrTestBase>
+  1c:	e3a02020 	mov	r2, #32
+  20:	e2522001 	subs	r2, r2, #1
+  24:	e4802004 	str	r2, [r0], #4
+  28:	1afffffc 	bne	20 <main+0x20>
+  2c:	e3a07007 	mov	r7, #7
+
+00000030 <loop>:
+  30:	e59f305c 	ldr	r3, [pc, #92]	; 94 <AdrTestBase>
+  34:	e3a05020 	mov	r5, #32
+  38:	e3a06000 	mov	r6, #0
+  3c:	e4934004 	ldr	r4, [r3], #4
+  40:	e0866004 	add	r6, r6, r4
+  44:	e2178001 	ands	r8, r7, #1
+  48:	03550015 	cmpeq	r5, #21
+  4c:	13550c01 	cmpne	r5, #256	; 0x100
+  50:	0e010f10 	mcreq	15, 0, r0, cr1, cr0, {0}
+  54:	e2555001 	subs	r5, r5, #1
+  58:	1afffff7 	bne	3c <loop+0xc>
+  5c:	e3560e1f 	cmp	r6, #496	; 0x1f0
+  60:	13a0a00a 	movne	sl, #10
+  64:	1a000002 	bne	74 <testfail>
+  68:	e2577001 	subs	r7, r7, #1
+  6c:	1affffef 	bne	30 <loop>
+  70:	ea000002 	b	80 <testpass>
+
+00000074 <testfail>:
+  74:	e59fb014 	ldr	fp, [pc, #20]	; 90 <AdrTestStatus>
+  78:	e58ba000 	str	sl, [fp]
+  7c:	eafffffc 	b	74 <testfail>
+
+00000080 <testpass>:
+  80:	e59fb008 	ldr	fp, [pc, #8]	; 90 <AdrTestStatus>
+  84:	e3a0a011 	mov	sl, #17
+  88:	e58ba000 	str	sl, [fp]
+  8c:	eafffffb 	b	80 <testpass>
+
+00000090 <AdrTestStatus>:
+  90:	f0000000 	.word	0xf0000000
+
+00000094 <AdrTestBase>:
+  94:	001fffc0 	.word	0x001fffc0
+
+00000098 <MagicNumber1024>:
+  98:	0007fe00 	.word	0x0007fe00
+
+0000009c <MagicNumber2048>:
+  9c:	001ffc00 	.word	0x001ffc00

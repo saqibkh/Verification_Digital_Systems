@@ -1,0 +1,54 @@
+
+bic_bug.elf:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	e3a03000 	mov	r3, #0
+   4:	e3a00001 	mov	r0, #1
+   8:	e3a020ff 	mov	r2, #255	; 0xff
+   c:	e1120310 	tst	r2, r0, lsl r3
+  10:	11c22310 	bicne	r2, r2, r0, lsl r3
+  14:	e35200fe 	cmp	r2, #254	; 0xfe
+  18:	13a0a00a 	movne	sl, #10
+  1c:	1a000018 	bne	84 <testfail>
+  20:	e3530000 	cmp	r3, #0
+  24:	13a0a014 	movne	sl, #20
+  28:	1a000015 	bne	84 <testfail>
+  2c:	e3a03001 	mov	r3, #1
+  30:	e3a020ff 	mov	r2, #255	; 0xff
+  34:	e1120310 	tst	r2, r0, lsl r3
+  38:	11c22310 	bicne	r2, r2, r0, lsl r3
+  3c:	e35200fd 	cmp	r2, #253	; 0xfd
+  40:	13a0a01e 	movne	sl, #30
+  44:	1a00000e 	bne	84 <testfail>
+  48:	e3530001 	cmp	r3, #1
+  4c:	13a0a028 	movne	sl, #40	; 0x28
+  50:	1a00000b 	bne	84 <testfail>
+  54:	e3a03001 	mov	r3, #1
+  58:	e3a020f0 	mov	r2, #240	; 0xf0
+  5c:	e1120310 	tst	r2, r0, lsl r3
+  60:	11c22310 	bicne	r2, r2, r0, lsl r3
+  64:	13a02000 	movne	r2, #0
+  68:	e35200f0 	cmp	r2, #240	; 0xf0
+  6c:	13a0a032 	movne	sl, #50	; 0x32
+  70:	1a000003 	bne	84 <testfail>
+  74:	e3530001 	cmp	r3, #1
+  78:	13a0a03c 	movne	sl, #60	; 0x3c
+  7c:	1a000000 	bne	84 <testfail>
+  80:	ea000002 	b	90 <testpass>
+
+00000084 <testfail>:
+  84:	e59fb014 	ldr	fp, [pc, #20]	; a0 <AdrTestStatus>
+  88:	e58ba000 	str	sl, [fp]
+  8c:	eafffffc 	b	84 <testfail>
+
+00000090 <testpass>:
+  90:	e59fb008 	ldr	fp, [pc, #8]	; a0 <AdrTestStatus>
+  94:	e3a0a011 	mov	sl, #17
+  98:	e58ba000 	str	sl, [fp]
+  9c:	eafffffb 	b	90 <testpass>
+
+000000a0 <AdrTestStatus>:
+  a0:	f0000000 	.word	0xf0000000

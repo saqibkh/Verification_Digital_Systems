@@ -1,5 +1,8 @@
 # Verification_Digital_Systems
 
+https://www.cerc.utexas.edu/~jaa/verification/
+
+
 LABORATORY EXERCISES:
 
 Lab 1 - Logic Equivalence Checking (LEC)

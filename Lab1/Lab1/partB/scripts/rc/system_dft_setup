@@ -1,0 +1,108 @@
+
+Design Name
+===========
+    system
+
+Scan Style
+==========
+    muxed_scan
+Design has a valid DFT rule check status
+
+Global Constraints
+==================
+    Minimum number of scan chains: 4
+    Maximum length of scan chains: no_value
+    Lock-up element type: preferred_level_sensitive
+    Mix clock edges in scan chain: true
+    Prefix for unnamed scan objects: DFT_
+
+Test signal objects
+===================
+    test_mode: 
+          object name: scan_mode 
+          pin name: scan_mode 
+          hookup_pin: scan_mode 
+          hookup_polarity: non_inverted 
+          active: high 
+
+    shift_enable: 
+          object name: scan_en 
+          pin name: scan_en 
+          hookup_pin: scan_en 
+          hookup_polarity: non_inverted 
+          active: high 
+
+    test_mode: 
+          object name: scan_cg_en 
+          pin name: scan_cg_en 
+          hookup_pin: scan_cg_en 
+          hookup_polarity: non_inverted 
+          active: high 
+
+Test clock objects
+==================
+    test_clock:
+          object name: scan_clk 
+          test_clock_domain: scan_clk 
+          user defined: true 
+          source: scan_clk  
+          root source: scan_clk  
+          root source polarity: non_inverting
+          hookup_pin: scan_clk 
+          period: 50000.0
+
+
+DFT controllable objects
+========================
+
+DFT don't scan objects
+======================
+
+DFT abstract don't scan objects
+===============================
+
+DFT scan segment constraints
+============================
+
+DFT actual scan chains
+======================
+    Actual Chain:
+          object name: chain1 
+          scan-in: test_si[0] 
+          scan-in hookup_pin: test_si[0] 
+          scan-out: test_so[0] 
+          scan-out hookup_pin: test_so[0] 
+          shift_enable: scan_en 
+          length: 685
+          test_clock domain: scan_clk
+
+    Actual Chain:
+          object name: chain2 
+          scan-in: test_si[1] 
+          scan-in hookup_pin: test_si[1] 
+          scan-out: test_so[1] 
+          scan-out hookup_pin: test_so[1] 
+          shift_enable: scan_en 
+          length: 685
+          test_clock domain: scan_clk
+
+    Actual Chain:
+          object name: chain3 
+          scan-in: test_si[2] 
+          scan-in hookup_pin: test_si[2] 
+          scan-out: test_so[2] 
+          scan-out hookup_pin: test_so[2] 
+          shift_enable: scan_en 
+          length: 685
+          test_clock domain: scan_clk
+
+    Actual Chain:
+          object name: chain4 
+          scan-in: test_si[3] 
+          scan-in hookup_pin: test_si[3] 
+          scan-out: test_so[3] 
+          scan-out hookup_pin: test_so[3] 
+          shift_enable: scan_en 
+          length: 685
+          test_clock domain: scan_clk
+
